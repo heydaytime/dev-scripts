@@ -23,9 +23,7 @@ else
     # Execute the selected file.
     zsh "$selected_file"
     # If the command executed successfully, pause before killing the pane.
-    if [[ $? -eq 0 ]]; then
-        echo "Press any key to close this pane..."
-        read -n1 -s
-    fi
+    echo "Press any key to close this pane..."
+    read -n1 -s
     tmux kill-pane
 fi
